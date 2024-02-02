@@ -1,0 +1,39 @@
+<!-- use all mouse events when you add the image of yourself and when certain mouse events is applied it will display your bio in the webpage when your images is double clicked when you press right context menu when you use on click  in the second taskwhen you hover the mouse on mouse out on mouse up on mouse down on the picture of eistine it will dislay the following thigs: -->
+<!-- force = m*a -->
+<!-- table off 2 -->
+<!-- newtons three laws -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse events</title>
+</head>
+<body>
+    <h1>Slide up the mouse to know more</h1>
+    <img src="himanshu.jpeg" id="left click to know more" height="400px" width="200"/>
+    <img src="Eistien.jpeg" id="on click" hieght="400px" width="200"/>
+    <script>
+        
+        var photo = document.getElementById("left click to know more");
+  
+        
+        function redirectToLink() {
+          
+          var link = "iinde.html";
+  
+          
+          var confirmRedirect = confirm("Do you want to go to the link?");
+  
+          
+          if (confirmRedirect) {
+            window.location.href = link;
+          }
+        }
+  
+        
+        photo.onclick = redirectToLink;
+      </script>
+    
+</body>
+</html>

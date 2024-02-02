@@ -1,0 +1,253 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table tr td {
+        border-radius: 5px;
+        border: 2px solid green;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>User information</legend>
+      <form action="#" autocomplete="off" onsubmit="return check()">
+        <table
+          style="width: 100%"
+          cellpadding="10"
+          cellspacing="10"
+          align="center"
+        >
+          <tr>
+            <td>
+              <input type="text" id="name" placeholder="Enter Your name" />
+              <span id="name1"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter Your password"
+              />
+              <span id="pass1"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="password"
+                id="conpass"
+                placeholder="Enter Your Confirm password"
+              />
+              <span id="conpass1"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="tel" id="mobile" placeholder="Enter Your mobile" />
+              <span id="mobile1"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="email" id="email" placeholder="Enter Your Email" />
+              <span id="email1"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="submit" id="button" placeholder="Submit" />
+              <span id="button1"></span>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <script>
+        var a = document.getElementById("name").value;
+        function check() {
+          if (a == "") {
+            document.getElementById("name1").innerHTML =
+              "It should not be null";
+          }
+          if(!isNaN(a))
+          {
+            document.getElementById("name1").innerHTML =
+              "It should not be a number";
+          }
+          if (a.length () < 4) {
+            document.getElementById("name1").innerHTML =
+              "It should be more than 3";
+          }
+        }
+      </script>
+    </fieldset>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+
+    <style>
+        body {
+            background-color: #dac8c8;
+            font-family: Arial, sans-serif;
+            margin: 2%;
+            padding: 2%;
+            height: 80vh;
+        }
+
+        fieldset {
+            background-color: #e7cb5b;
+            padding: 10px;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 30px;
+            width: 400px;
+            
+        }
+
+        h1, h2 {
+            text-align:left=
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        table tr td {
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid rgb(0, 34, 255);
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="tel"],
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #abb7c4;
+        }
+
+        span {
+            color: blue;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Himanshu Garg</h1>
+    <h2>Roll:54</h2>
+    <fieldset>
+        <legend>User information</legend>
+
+        <form action="#" autocomplete="off" onsubmit="return check()">
+
+            <table cellpadding="10" cellspacing="10">
+                <tr>
+                    <td><input type="text" id="name" placeholder="Enter Your name"> <span id="name1"></span></td>
+                </tr>
+                <tr>
+                    <td><input type="password" id="password" placeholder="Enter Your password"> <span id="pass1"></span></td>
+                </tr>
+                <tr>
+                    <td><input type="password" id="conpass" placeholder="Enter Your Confirm password"> <span id="conpass1"></span></td>
+                </tr>
+                <tr>
+                    <td><input type="tel" id="mobile" placeholder="Enter Your mobile"> <span id="mobile1"></span></td>
+                </tr>
+                <tr>
+                    <td><input type="email" id="email" placeholder="Enter Your Email"> <span id="email1"></span></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" id="button" value="Submit"> <span id="button1"></span></td>
+                </tr>
+            </table>
+
+        </form>
+
+        <script>
+            function check() {
+                var nameValue = document.getElementById('name').value;
+                var passValue = document.getElementById('password').value;
+                var conpassValue = document.getElementById('conpass').value;
+                var mobileValue = document.getElementById('mobile').value;
+                var emailValue = document.getElementById('email').value;
+
+                // Reset error messages
+                document.getElementById('name1').innerHTML = "";
+                document.getElementById('pass1').innerHTML = "";
+                document.getElementById('conpass1').innerHTML = "";
+                document.getElementById('mobile1').innerHTML = "";
+                document.getElementById('email1').innerHTML = "";
+
+                // Validate Name
+                if (nameValue === "") {
+                    document.getElementById('name1').innerHTML = "Name should not be null.";
+                    return false;
+                } else if (nameValue.length < 4) {
+                    document.getElementById('name1').innerHTML = "Name should be more than 3 characters.";
+                    return false;
+                }
+ // Validate Password
+ if (passValue === "") {
+                    document.getElementById('pass1').innerHTML = "Password should not be null.";
+                    return false;
+                }
+
+                // Validate Confirm Password
+                if (conpassValue !== passValue) {
+                    document.getElementById('conpass1').innerHTML = "Passwords do not match.";
+                    return false;
+                }
+
+
+                // Validate Mobile
+                if (mobileValue === ""  isNaN(mobileValue)  mobileValue.length !== 10) {
+                    document.getElementById('mobile1').innerHTML = "Enter a valid 10-digit mobile number.";
+                    return false;
+                }
+
+                // Validate Email
+                var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(emailValue)) {
+                    document.getElementById('email1').innerHTML = "Enter a valid email address.";
+                    return false;
+                }
+
+                return true;
+            }
+            
+        </script>
+
+    </fieldset>
+</body>
+</html>

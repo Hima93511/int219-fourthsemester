@@ -1,0 +1,32 @@
+<!-- on key up on key down and on key press  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events</title>
+</head>
+<body>
+<h2>Key board events</h2>
+<!-- <input type="text" id="onkeydown" placeholder="OnkeyDown" class="one" onkeydown="alert(this.value)"><br> -->
+<!-- <input type="text"id="onkeyup" placeholder="Onkeyup"  class="one" onkeydown="alert(this.value)" ><br> -->
+<!-- <input type="text"id="onkeypress" placeholder="onkeyPress"  class="one" onkeydown="alert(this.value)" > -->
+<!-- <input type="text"id="onkeyup" placeholder="Onkeyup" ><br> -->
+<input type="text"id="onkeypress" placeholder="onkeyPress">
+<script>
+    const myInput = document.getElementById("onkeypress");
+    
+    
+
+myInput.onkeyup = function () {
+  const color = this.value.toLowerCase();
+  this.style.backgroundColor = color;
+};
+
+myInput.onkeypress = function () {
+  this.style.backgroundColor = "white";
+      };
+</script>
+
+</body>
+</html>
