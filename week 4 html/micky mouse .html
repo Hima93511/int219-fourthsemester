@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mickey Mouse</title>
+<style>
+    #mickey {
+        width: 200px;
+        height: 200px;
+        background-color: #fff;
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;
+    }
+    .ear {
+        width: 60px;
+        height: 100px;
+        background-color: #000;
+        border-radius: 50%;
+        position: absolute;
+    }
+    .ear.left {
+        top: -20px;
+        left: -30px;
+    }
+    .ear.right {
+        top: -20px;
+        right: -30px;
+    }
+    #eyes {
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 50px;
+        left: 75px;
+        transition: background-color 0.5s;
+    }
+    #face {
+        width: 150px;
+        height: 150px;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 75px;
+        left: 25px;
+        transition: background-color 0.5s;
+    }
+</style>
+</head>
+<body>
+
+<div id="mickey">
+    <div class="ear left"></div>
+    <div class="ear right"></div>
+    <div id="eyes"></div>
+    <div id="face"></div>
+</div>
+
+<button onclick="changeEyeColor()">Change Eye Color</button>
+<button onclick="changeFaceColor()">Change Face Color</button>
+
+<script>
+    const eyes = document.getElementById('eyes');
+    const face = document.getElementById('face');
+
+    function changeEyeColor() {
+        eyes.style.backgroundColor = '#000';
+    }
+
+    function changeFaceColor() {
+        face.style.backgroundColor = 'peachpuff';
+    }
+
+    const ears = document.querySelectorAll('.ear');
+
+    ears.forEach(ear => {
+        ear.addEventListener('mouseenter', function() {
+            this.style.backgroundColor = 'pink';
+        });
+        ear.addEventListener('mouseleave', function() {
+            this.style.backgroundColor = '#000';
+        });
+    });
+</script>
+
+</body>
+</html>

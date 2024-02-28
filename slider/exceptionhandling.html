@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input tyoe="text" placeholder="enter bw 7-30" id="text1">
+    <button onclick="demo()">Submit</button>
+    <p id="p1"></p>
+    <script>
+        const a= document.getElementById(p1)
+        
+        function demo()
+        {
+            let b= document.getElementById("text1").value;
+        console.log(b);
+        try
+        {
+            if(b=="") throw "error";
+           else if(b<7) throw "number is smaller";
+           else if(b>30) throw "number is greater";
+           else if(isNan(b)) throw "not a number";
+           else{
+            alert("correct");
+           }
+        }
+        catch(e)
+        {
+            console.log("the output is : ",e)
+            // a.innerHTML="The output is"+e
+        }
+
+        
+        }
+        
+        
+
+    </script>
+</body>
+</html>
+
+

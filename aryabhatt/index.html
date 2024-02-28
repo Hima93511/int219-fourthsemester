@@ -1,0 +1,143 @@
+  <!--create an image and button the image is of aryabhatt and the button name will be table sash factorial when you applied add addEventListener -->
+  <!--in the button the image of aryabahatt will disappear 
+at that place table will be displyaed and when we press the button the second time table will be disappear and factorial wil be displayed -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aryabhatt</title>
+<style>
+  #aryabhatt-img {
+    width: 200px;
+    height: auto;
+  }
+  #table {
+    display: none;
+  }
+</style>
+</head>
+<body>
+<div id="content" style="text-align: center; margin-top: 50px;">
+  <img src="12.jpeg" alt="Aryabhatt" id="aryabhatt-img">
+  <br>
+  <button id="toggle-btn">Table / Factorial</button>
+  <table id="table">
+    <tr><th>Number</th><th>Square</th><th>Cube</th></tr>
+    
+  </table>
+</div>
+
+<script>
+document.getElementById('toggle-btn').addEventListener('click', function() {
+  var img = document.getElementById('aryabhatt-img');
+  var table = document.getElementById('table');
+  if (img.style.display === 'none') {
+    img.style.display = 'block';
+    table.style.display = 'none';
+  } else {
+    img.style.display = 'none';
+    table.style.display = 'block';
+    generateTable();
+  }
+});
+
+function generateTable() {
+  var table = document.getElementById('table');
+  table.innerHTML = '<tr><th>Number</th><th>Square</th><th>Cube</th></tr>';
+  for (var i = 1; i <= 10; i++) {
+    var square = i * i;
+    var cube = i * i * i;
+    table.innerHTML += '<tr><td>' + i + '</td><td>' + square + '</td><td>' + cube + '</td></tr>';
+  }
+}
+</script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aryabhatt</title>
+<style>
+  #aryabhatt-img {
+    width: 400px;
+    height: auto;
+  }
+  #table, #factorial {
+    display: none;
+  }
+</style>
+</head>
+<body>
+<div id="content" style="text-align: center; margin-top: 50px;">
+  <img src="100.jpg" alt="Aryabhatt" id="aryabhatt-img">
+  <br>
+  <button id="toggle-btn">Table / Factorial</button>
+  <table id="table">
+    
+  </table>
+  <div id="factorial">
+    
+  </div>
+</div>
+
+<script>
+document.getElementById('toggle-btn').addEventListener('click', function() {
+  var img = document.getElementById('aryabhatt-img');
+  var table = document.getElementById('table');
+  var factorialDiv = document.getElementById('factorial');
+  
+  if (img.style.display === 'none') {
+    img.style.display = 'block';
+    table.style.display = 'none';
+    factorialDiv.style.display = 'none';
+  } else if (table.style.display === 'none') {
+    img.style.display = 'none';
+    table.style.display = 'block';
+    factorialDiv.style.display = 'none';
+    generateTable();
+  } else {
+    img.style.display = 'none';
+    table.style.display = 'none';
+    factorialDiv.style.display = 'block';
+    calculateFactorial();
+  }
+});
+
+function generateTable() {
+  var table = document.getElementById('table');
+  table.innerHTML = '<tr><th>Number</th><th>Square</th><th>Cube</th></tr>';
+  for (var i = 1; i <= 10; i++) {
+    var square = i * i;
+    var cube = i * i * i;
+    table.innerHTML += '<tr><td>' + i + '</td><td>' + square + '</td><td>';
+  }
+}
+
+function calculateFactorial() {
+  var factorialDiv = document.getElementById('factorial');
+  factorialDiv.innerHTML = '';
+  for (var i = 2; i <= 10; i++) {
+    factorialDiv.innerHTML += '<p>' + i + '! = ' + getFactorial(i) + '</p>';
+  }
+}
+
+function getFactorial(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  } else {
+    return n * getFactorial(n - 1);
+  }
+}
+</script>
+</body>
+</html>
+
+
+
+

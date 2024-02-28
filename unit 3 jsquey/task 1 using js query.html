@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <scrpit src="jquery-3.7.1.min.js"></scrpit>
+</head>
+<body>
+   <table>
+    <tr>
+        <th>DATESHEET</th>
+    </tr>
+    <tr>
+        <td>SUBJECTS</td>
+        <td>TIMINGS</td>
+        <td> ROOM NO </td>
+    </tr>
+    <tr id="th"></tr><td>GEN AI</td><td>9.30-10.30</td><td>26-606</td></tr>
+    <tr><td>OS</td><td>9.30-10.30</td><td>26-606</td></tr>
+    <tr><td>OS</td><td>9.30-10.30</td><td>26-606</td></tr>
+   </table>
+   <script>
+    $(document).ready(function(){
+        $("table").css("border","Solid");
+        $(".tr").css("border","solid");
+        $(".tr").css("margin","1px");
+        $(".tr").css("padding","1px");
+        $("#th").css("border","solid");
+        $("#th").css("backgroundColor","pink");
+        $("#time").css("backgroundColor","Blue");
+    });
+   </script> 
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flower with Six Petals</title>
+<style>
+  .flower {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    border-top-color: #ff7eb9;
+  }
+  .petal {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 25px 0;
+    border-color: transparent transparent #ff7eb9;
+  }
+  .petal:nth-child(1) { transform: rotate(60deg); }
+  .petal:nth-child(2) { transform: rotate(120deg); }
+  .petal:nth-child(3) { transform: rotate(180deg); }
+  .petal:nth-child(4) { transform: rotate(240deg); }
+  .petal:nth-child(5) { transform: rotate(300deg); }
+  .petal:nth-child(6) { transform: rotate(360deg); }
+</style>
+</head>
+<body>
+
+<div class="flower">
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+  <div class="petal"></div>
+</div>
+
+</body>
+</html>
